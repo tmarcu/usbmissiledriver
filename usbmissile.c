@@ -50,7 +50,7 @@ static uint8_t STOP[] = {00, 00, 00, 00, 00, 00, 00, 00};
 libusb_device_handle *findUSB(libusb_context *session, struct libusb_device **list) {
 	libusb_device_handle *h_dev = 0;	/* USB device handle */
 	int devcount;
-	struct libusb_device_descriptor ddesc; /* Device descriptor gives us info abuot USB devices */
+	struct libusb_device_descriptor ddesc; /* Device descriptor gives us info about USB devices */
 	int i;
 
 	/* Get all of the USB devices on the computer */
