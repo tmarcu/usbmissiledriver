@@ -84,7 +84,7 @@ libusb_device_handle *findUSB(libusb_context *session, struct libusb_device **li
 	return h_dev;
 }
 
-int claimInterface(libusb_context *session, libusb_device_handle *h_dev, struct libusb_device **list) {
+int claim_interface(libusb_context *session, libusb_device_handle *h_dev, struct libusb_device **list) {
 	int ret = 1;
 
 	/* Check if the kernel driver is already attached to the launcher.
@@ -155,7 +155,7 @@ int main(int argc, char *argv[]) {
 
 	h_dev = findUSB(session, list);
 
-	if (claimInterface(session, h_dev, list)) {
+	if (claim_interface(session, h_dev, list)) {
 		freeDevice(h_dev, session);
 		exit(EXIT_FAILURE);
 	}
